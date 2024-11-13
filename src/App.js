@@ -14,7 +14,7 @@ function App() {
         <Route path='/' Component={Layout}>
         <Route index Component={RickAndMortyCharacters}></Route>
         <Route path='/characters/:id' Component={CharacterDetails}></Route>
-        <Route path='/prueba' element={<p>Prueba</p>}></Route>
+        <Route path='/prueba' element={<p>Informacion</p>}></Route>
         </Route>
       </Routes>
     </Router>
