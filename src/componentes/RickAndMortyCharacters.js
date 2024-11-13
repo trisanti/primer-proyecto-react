@@ -25,10 +25,11 @@ const RickAndMortyCharacters = () => {
         <div className="row row-cols-1 row-cols-md-2 g-2">
             {isLoading ? 'Cargando...' : ''}
             {!isLoading && characters.map(character => (
-                <Character key={character.id} name={character.name} 
+                <Character key={character.id} id={character.id} 
+                name={character.name} name0={character.name}
                 image={character.image} status={character.status} 
                 species={character.species} gender={character.gender} 
-                type={character.type} origin={character.origin.name}
+                origin={character.origin.name}
                 location={character.location.name}/>
             ))}
         </div>

@@ -1,20 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap'
 import Character from './componentes/Character';
-// import Counter from './componentes/Counter';
 import RickAndMortyCharacters from './componentes/RickAndMortyCharacters';
+import {Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import CharacterDetails from './componentes/CharacterDetails';
+import Layout from './componentes/Layout';
 
 function App() {
   return (
-
-  <div className='container'> 
-  {/*className='bg-dark'>
-    <div>Hola mundo</div>
-    <Character></Character>
-    <Character></Character>
-    <Counter/>*/}
-    <RickAndMortyCharacters/>
-  </div>
+    <Router>
+      <Routes>
+        <Route path='/' Component={Layout}>
+        <Route index Component={RickAndMortyCharacters}></Route>
+        <Route path='/characters/:id' Component={CharacterDetails}></Route>
+        <Route path='/prueba' element={<p>Prueba</p>}></Route>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
